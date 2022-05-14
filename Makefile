@@ -7,4 +7,7 @@ brain-games: # запускает игру
 publish: # публикация (обновление) пакетов в npm-репозитории
 	npm publish --dry-run
 
+lint: #запуск линтера в текущей директории
+	npx eslint .
+
 .PHONY: publish
