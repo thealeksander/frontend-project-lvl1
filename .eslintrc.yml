@@ -15,3 +15,4 @@ rules:
     - ignorePackages
     - js: always
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  VariableDeclarator: {"var": 2, "let": 2, "const": 3}
