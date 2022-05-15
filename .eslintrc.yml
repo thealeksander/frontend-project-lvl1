@@ -3,7 +3,7 @@ env:
   node: true
 
 extends:
-  - 'plugin:@typescript-eslint'
+  - 'plugin:@typescript-eslint/myConfig'
   - 'airbnb-base'
 
 parserOptions:
