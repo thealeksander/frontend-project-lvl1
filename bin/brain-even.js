@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const numbers = [15, 6, 7];
+const randomNumber = Math.floor(Math.random * 100);
+const numbers = [randomNumber, randomNumber, randomNumber];
 
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
