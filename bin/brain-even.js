@@ -31,4 +31,3 @@ const game = () => {
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 game();
-// импортируй функцию для имя пользователя
