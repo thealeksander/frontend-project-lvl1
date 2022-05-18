@@ -21,11 +21,12 @@ const game = () => {
   for (const randomNumber of numbers) {
     console.log(`Question: ${randomNumber}`);
     const useranswer = readlineSync.question('Your answer: ');
-    const correctAnswer = console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
     if (useranswer === 'no' && isEven(randomNumber) === 'yes') {
-      return correctAnswer;
+      return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
     } if (useranswer === 'yes' && isEven(randomNumber) === 'no') {
-      return correctAnswer;
+      return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
+    } if (useranswer !== 'yes' && useranswer !== 'no') {
+      return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
     }
     console.log('Correct!');
   }
