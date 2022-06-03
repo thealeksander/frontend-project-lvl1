@@ -21,4 +21,4 @@ const logicBrainGames = (rulesOfGame, generateRound) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export default logicBrainGames();
+export default logicBrainGames;
