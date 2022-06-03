@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+
 
 const randomNumber1 = Math.floor(Math.random() * 100);
 const randomNumber2 = Math.floor(Math.random() * 100);
