@@ -8,7 +8,7 @@ const logicBrainGames = (rulesOfGame, generateRound) => {
   console.log(`Hello, ${name}!`);
   console.log(rulesOfGame);
   for (let i = 0; i < roundCount; i += 1) {
-    const [question, answer] = generateRound();
+    const [question, answer] = generateRound;
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== answer) {
