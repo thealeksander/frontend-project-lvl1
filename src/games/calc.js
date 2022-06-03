@@ -1,6 +1,30 @@
 import logicBrainGames from '../index.js';
 
-const signs = ['+', '-', '*'];
-const randomSign = signs[Math.floor(signs.length * Math.random())];
+const rulesOfGame = 'What is the result of the expression?';
+const listOperators = ['+', '-', '*'];
 
-const randomNumber1 = Math.floor(Math.random() * 100);
+const calc = (numberFirst, numberSecond, operator) => {
+  switch (operator) {
+    case '+':
+      return numberFirst + numberSecond;
+    case '-':
+      return numberFirst - numberSecond;
+    case '*':
+      return numberFirst * numberSecond;
+    default:
+      throw new Error(`Wrong operator - '${operator}', use only '+', '-', '*'!`);
+  }
+};
+
+const generateRound = () => {
+  const numberFirst = Math.floor(Math.random() * 100);
+  const numberSecond = Math.floor(Math.random() * 100);
+  const operator = listOperators[Math.floor(listOperators.length * Math.random())];
+  const question = `${numberFirst} ${operator} ${numberSecond}`;
+  const answer = String(calc(numberFirst, numberSecond, operator));
+  return [question, answer];
+};
+
+const calcGame = () => logicBrainGames(rulesOfGame, generateRound);
+
+export default calcGame;

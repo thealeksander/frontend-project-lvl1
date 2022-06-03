@@ -1,4 +1,4 @@
-
+import readlineSync from 'readline-sync';
 
 const randomNumber1 = Math.floor(Math.random() * 100);
 const randomNumber2 = Math.floor(Math.random() * 100);
@@ -23,9 +23,11 @@ const game = () => {
     const useranswer = readlineSync.question('Your answer: ');
     if (useranswer === 'no' && isEven(randomNumber) === 'yes') {
       return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
-    } if (useranswer === 'yes' && isEven(randomNumber) === 'no') {
+    }
+    if (useranswer === 'yes' && isEven(randomNumber) === 'no') {
       return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
-    } if (useranswer !== 'yes' && useranswer !== 'no') {
+    }
+    if (useranswer !== 'yes' && useranswer !== 'no') {
       return console.log(`'${useranswer}' is wrong answer ;(. Correct answer was ${isEven(randomNumber)}.\nLet's try again, ${name}!`);
     }
     console.log('Correct!');

@@ -1,4 +1,4 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const roundCount = 3;
 
@@ -12,13 +12,13 @@ const logicBrainGames = (rulesOfGame, generateRound) => {
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== answer) {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
-        console.log(`Let's try again, ${name}`);
-        return;
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'`);
+      console.log(`Let's try again, ${name}`);
+      return;
     }
     console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };
 
-export default logicBrainGames;
+export default logicBrainGames();
