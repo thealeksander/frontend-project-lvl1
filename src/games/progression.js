@@ -1,26 +1,33 @@
+import _ from 'lodash';
 import logicBrainGames from '../index.js';
 
 const rulesOfGame = 'What number is missing in the progression?';
 
-const gcd = (numberFirst, numberSecond) => {
-  let maxGcd = 0;
-  for (let i = 1; i <= numberFirst || i <= numberSecond; i += 1) {
-    if (numberFirst % i === 0 && numberSecond % i === 0) {
-      if (i > maxGcd) {
-        maxGcd = i;
-      }
-    }
+const getArrey = () => {
+  const arrey = [];
+  const number = _.random(0, 50); // if you'll get error, see here
+  const interval = _.random(0, 8);
+  const length = _.random(4, 10);
+  for (let i = 0; i < length; i += 1) {
+    arrey.push(number + interval);
   }
-  return maxGcd;
+  return arrey;
+};
+
+const getQuestion = () => {
+  const arreyWhithSpace = getArrey();
+  const randomPlace = _.random(0, arreyWhithSpace.length - 1);
+  let numberOfAnswer = arreyWhithSpace[randomPlace];
+  numberOfAnswer = '..';
+  return arreyWhithSpace;
+};
+
+const getAnswer = () => {
+  
 };
 
 const generateRound = () => {
-  const number1 = Math.floor(Math.random() * 100);
-  const number2 = Math.floor(Math.random() * 100);
-  const number3 = Math.floor(Math.random() * 100);
-  const number4 = Math.floor(Math.random() * 100);
-  const number5 = Math.floor(Math.random() * 100);
-  const question = `${number1} ${number2} ${number3} ${number4} ${number5}`;
+  const question = `${getQuestion()}`;
   const answer = String(gcd(number1, number2, number3, number4, number5));
   return [question, answer];
 };
