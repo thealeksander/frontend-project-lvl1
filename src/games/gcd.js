@@ -17,7 +17,7 @@ const gcd = (numberFirst, numberSecond) => {
 const generateRound = () => {
   const numberFirst = Math.floor(Math.random() * 100);
   const numberSecond = Math.floor(Math.random() * 100);
-  const question = `${numberFirst}  ${numberSecond}`;
+  const question = `${numberFirst} ${numberSecond}`;
   const answer = String(gcd(numberFirst, numberSecond));
   return [question, answer];
 };
