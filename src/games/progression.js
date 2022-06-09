@@ -15,26 +15,13 @@ const getArrey = () => {
   return arrey;
 };
 
-const getQuestion = () => {
-  const arreyWithSpace = getArrey();
-  const randomSpace = _.random(0, arreyWithSpace.length - 1);
-  arreyWithSpace[randomSpace] = '..';
-  const result = arreyWithSpace.join(' ');
-  return result;
-};
-
-const getAnswer = () => {
-  const firstMassive = getArrey();
-  const secondMassive = getQuestion();
-  const line = secondMassive.split(' ');
-  const index = line.indexOf('..');
-  const result = firstMassive[index];
-  return result;
-};
-
 const generateRound = () => {
-  const question = `${getQuestion()}`;
-  const answer = String(getAnswer());
+  const progression = getArrey();
+  const randomSpace = _.random(0, progression.length - 1);
+  const rightNumber = progression[randomSpace];
+  progression[randomSpace] = '..';
+  const question = progression.join(' ');
+  const answer = String(rightNumber);
   return [question, answer];
 };
 
