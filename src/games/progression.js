@@ -5,7 +5,7 @@ const rulesOfGame = 'What number is missing in the progression?';
 
 const getArrey = () => {
   const arrey = [];
-  let number = _.random(0, 50); // if you'll get error, see here!
+  let number = _.random(0, 50);
   const interval = _.random(1, 8);
   const length = _.random(5, 10);
   for (let i = 0; i < length; i += 1) {
@@ -15,18 +15,18 @@ const getArrey = () => {
   return arrey;
 };
 
-const firstMassive = getArrey();
-
 const getQuestion = () => {
-  const randomSpace = _.random(0, firstMassive.length - 1);
-  firstMassive[randomSpace] = '..';
-  const result = firstMassive.join(' ');
+  const arreyWithSpace = getArrey();
+  const randomSpace = _.random(0, arreyWithSpace.length - 1);
+  arreyWithSpace[randomSpace] = '..';
+  const result = arreyWithSpace.join(' ');
   return result;
 };
 
 const getAnswer = () => {
-  const irr = getQuestion();
-  const line = irr.split(' ');
+  const firstMassive = getArrey();
+  const secondMassive = getQuestion();
+  const line = secondMassive.split(' ');
   const index = line.indexOf('..');
   const result = firstMassive[index];
   return result;
