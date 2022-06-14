@@ -9,4 +9,4 @@ https://asciinema.org/a/JkvqZkViWZKpYVcZB5QAateQ4
 https://asciinema.org/a/bwFlrDK62cXz5mPiKGQ0O9LEl
 https://asciinema.org/a/EjWxn1ADIGAV4cgBYH0T8SNFo
 
-The project has name "Frontend-project-lvl1". It's my first project. It has five mini-games to have general logic. Also it has Makefile that has four commands. The project has been developed to learn to make environment of job. 
+The project has name "Frontend-project-lvl1". It's my first project. it has Makefile that has four commands. Also the project has five mini-games to have general logic. You can see above the five links. It's links of video that show like looks games. The project has been developed to learn to make environment of job. 
