@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
+import getRandomInt from '../utils.js';
 
-const randomNumber1 = Math.floor(Math.random() * 100);
-const randomNumber2 = Math.floor(Math.random() * 100);
-const randomNumber3 = Math.floor(Math.random() * 100);
+const randomNumber1 = getRandomInt(0, 100);
+const randomNumber2 = getRandomInt(0, 100);
+const randomNumber3 = getRandomInt(0, 100);
 const numbers = [randomNumber1, randomNumber2, randomNumber3];
 
 const isEven = (even) => {

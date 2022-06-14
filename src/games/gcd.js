@@ -1,4 +1,5 @@
 import logicBrainGames from '../index.js';
+import getRandomInt from '../utils.js';
 
 const rulesOfGame = 'Find the greatest common divisor of given numbers.';
 
@@ -15,8 +16,8 @@ const gcd = (numberFirst, numberSecond) => {
 };
 
 const generateRound = () => {
-  const numberFirst = Math.floor(Math.random() * 100);
-  const numberSecond = Math.floor(Math.random() * 100);
+  const numberFirst = getRandomInt(0, 100);
+  const numberSecond = getRandomInt(0, 100);
   const question = `${numberFirst} ${numberSecond}`;
   const answer = String(gcd(numberFirst, numberSecond));
   return [question, answer];

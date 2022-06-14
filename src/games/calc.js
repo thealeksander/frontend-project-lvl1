@@ -1,4 +1,5 @@
 import logicBrainGames from '../index.js';
+import getRandomInt from '../utils.js';
 
 const rulesOfGame = 'What is the result of the expression?';
 const listOperators = ['+', '-', '*'];
@@ -17,8 +18,8 @@ const calc = (numberFirst, numberSecond, operator) => {
 };
 
 const generateRound = () => {
-  const numberFirst = Math.floor(Math.random() * 100);
-  const numberSecond = Math.floor(Math.random() * 100);
+  const numberFirst = getRandomInt(0, 100);
+  const numberSecond = getRandomInt(0, 100);
   const operator = listOperators[Math.floor(listOperators.length * Math.random())];
   const question = `${numberFirst} ${operator} ${numberSecond}`;
   const answer = String(calc(numberFirst, numberSecond, operator));
