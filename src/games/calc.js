@@ -26,6 +26,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const calcGame = () => logicBrainGames(rulesOfGame, generateRound);
+const getcalcGame = () => logicBrainGames(rulesOfGame, generateRound);
 
-export default calcGame;
+export default getcalcGame;
