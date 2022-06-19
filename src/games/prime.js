@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import logicBrainGames from '../index.js';
+import startLogicGames from '../index.js';
 
 const rulesOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -19,6 +19,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const startPrimeGame = () => logicBrainGames(rulesOfGame, generateRound);
+const startPrimeGame = () => startLogicGames(rulesOfGame, generateRound);
 
 export default startPrimeGame;

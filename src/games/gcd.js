@@ -1,4 +1,4 @@
-import logicBrainGames from '../index.js';
+import startLogicGames from '../index.js';
 import getRandomInt from '../utils.js';
 
 const rulesOfGame = 'Find the greatest common divisor of given numbers.';
@@ -23,6 +23,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const startGcdGame = () => logicBrainGames(rulesOfGame, generateRound);
+const startGcdGame = () => startLogicGames(rulesOfGame, generateRound);
 
 export default startGcdGame;

@@ -1,9 +1,9 @@
-import logicBrainGames from '../index.js';
+import startLogicGames from '../index.js';
 import getRandomInt from '../utils.js';
 
 const rulesOfGame = 'What number is missing in the progression?';
 
-const getArrey = () => {
+const setProgression = () => {
   const arrey = [];
   let number = getRandomInt(0, 50);
   const interval = getRandomInt(1, 8);
@@ -16,7 +16,7 @@ const getArrey = () => {
 };
 
 const generateRound = () => {
-  const progression = getArrey();
+  const progression = setProgression();
   const randomSpace = getRandomInt(0, progression.length - 1);
   const rightNumber = progression[randomSpace];
   progression[randomSpace] = '..';
@@ -25,6 +25,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const startProgressionGame = () => logicBrainGames(rulesOfGame, generateRound);
+const startProgressionGame = () => startLogicGames(rulesOfGame, generateRound);
 
 export default startProgressionGame;

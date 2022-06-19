@@ -1,4 +1,4 @@
-import logicBrainGames from '../index.js';
+import startLogicGames from '../index.js';
 import getRandomInt from '../utils.js';
 
 const rulesOfGame = 'What is the result of the expression?';
@@ -26,6 +26,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const startCalcGame = () => logicBrainGames(rulesOfGame, generateRound);
+const startCalcGame = () => startLogicGames(rulesOfGame, generateRound);
 
 export default startCalcGame;
