@@ -20,7 +20,7 @@ const calc = (numberFirst, numberSecond, operator) => {
 const generateRound = () => {
   const numberFirst = getRandomInt(0, 100);
   const numberSecond = getRandomInt(0, 100);
-  const operator = listOperators[Math.floor(listOperators.length * Math.random())];
+  const operator = listOperators[getRandomInt(0, listOperators.length)];
   const question = `${numberFirst} ${operator} ${numberSecond}`;
   const answer = String(calc(numberFirst, numberSecond, operator));
   return [question, answer];
