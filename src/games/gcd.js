@@ -23,6 +23,6 @@ const generateRound = () => {
   return [question, answer];
 };
 
-const getGcdGame = () => logicBrainGames(rulesOfGame, generateRound);
+const startGcdGame = () => logicBrainGames(rulesOfGame, generateRound);
 
-export default getGcdGame;
+export default startGcdGame;
