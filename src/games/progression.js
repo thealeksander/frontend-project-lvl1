@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 const rulesOfGame = 'What number is missing in the progression?';
 
-const setProgression = () => {
+const generateProgression = () => {
   const arrey = [];
   let number = getRandomInt(0, 50);
   const interval = getRandomInt(1, 8);
@@ -16,7 +16,7 @@ const setProgression = () => {
 };
 
 const generateRound = () => {
-  const progression = setProgression();
+  const progression = generateProgression();
   const randomSpace = getRandomInt(0, progression.length - 1);
   const rightNumber = progression[randomSpace];
   progression[randomSpace] = '..';
